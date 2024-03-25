@@ -1,12 +1,22 @@
-.logo {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    height: 120px;
+    color: #ffffff;
+    background-color: #4056a1;
+}
+
+nav span {
     font-size: 1.5em;
     font-family: "Bungee", sans-serif;
     font-weight: 400;
     font-style: normal;
-}
-
-.navtext {
-    margin: 5px;
 }
 
 .newtweet {
@@ -15,20 +25,15 @@
     align-items: center;
 }
 
-.redicon {
-    color: red;
+.navtext {
+    margin: 0 0 5px;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 1.5em;
-    font-family: "Source Sans 3", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    height: 120px;
-    color: #ffffff;
-    background-color: #4056a1;
+.navtext strong {
+    font-weight: 700;
+}
+
+.redicon {
+    margin: 0;
+    color: red;
 }
