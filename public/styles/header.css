@@ -1,0 +1,19 @@
+header {
+    padding-top: 120px;
+    height: 520px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #cc8800;
+    background-image: url("https://www.transparenttextures.com/patterns/black-scales.png");
+}
+
+.avatar {
+    padding-top: 2em;
+}
+
+.username h2 {
+    margin: 0;
+}
