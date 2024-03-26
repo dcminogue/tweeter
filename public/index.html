@@ -29,12 +29,10 @@
         <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
         <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
         <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+        <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
         <!-- External JS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-        <!-- App JS -->
-        <script type="text/javascript" src="/scripts/client.js"></script>
     </head>
 
     <body>
@@ -60,19 +58,21 @@
 
         <!-- Page-specific (main) content here -->
         <main class="container">
-            <h3>header 3</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-                nisi odio voluptates beatae consequuntur voluptate quibusdam
-                dolores nihil alias reiciendis.
-            </p>
-            <h3>djhdjwjckjadkc</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
-                tenetur quia numquam enim necessitatibus at nemo maiores laborum
-                nisi minus, omnis odio suscipit quaerat totam molestias nesciunt
-                pariatur minima? Odit.
-            </p>
+            <section class="new-tweet">
+                <form method="POST" action="/tweets">
+                    <label for="tweet-text">What are you humming about?</label>
+                    <textarea name="text" id="tweet-text"></textarea>
+                    <div class="submit-tweet">
+                        <button type="submit">Tweet</button>
+                        <output name="counter" class="counter" for="tweet-text"
+                            >140</output
+                        >
+                    </div>
+                </form>
+            </section>
         </main>
+
+        <!-- App JS -->
+        <script type="text/javascript" src="/scripts/client.js"></script>
     </body>
 </html>
