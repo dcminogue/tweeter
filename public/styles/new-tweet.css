@@ -32,3 +32,7 @@ button:hover,
 button:focus {
     background-color: #203a73;
 }
+
+.counter-red {
+    color: red;
+}

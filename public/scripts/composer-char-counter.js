@@ -3,9 +3,16 @@ let $counterText = $("#counter");
 
 const writeTweet = function () {
     let $count = 140;
-    const $textVal = $textarea.val();
+    let $textVal = $(this).val();
     $count = $count - $textVal.length;
-    $counterText.text($count);
+    let $counter = $("#counter");
+    $counter.text($count);
+
+    if ($count < 0) {
+        $counter.addClass("counter-red");
+    } else {
+        $counter.removeClass("counter-red");
+    }
 };
 
 $(document).ready(function () {
