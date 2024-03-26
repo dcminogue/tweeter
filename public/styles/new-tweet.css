@@ -5,6 +5,7 @@
 }
 
 textarea {
+    padding: 10px;
     resize: none;
     border: none;
     border-bottom: 5px solid black;
@@ -25,4 +26,9 @@ button {
     padding: 5px 10px;
     border: none;
     outline: none;
+}
+
+button:hover,
+button:focus {
+    background-color: #203a73;
 }
