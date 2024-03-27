@@ -1,7 +1,5 @@
-let $textarea = $("#tweet-text");
-let $counterText = $("#counter");
-
-const writeTweet = function () {
+const app = {};
+app.writeTweet = function () {
     let $count = 140;
     let $textVal = $(this).val();
     $count = $count - $textVal.length;
@@ -16,5 +14,6 @@ const writeTweet = function () {
 };
 
 $(document).ready(function () {
-    $textarea.on("keyup", writeTweet);
+    let $textarea = $("#tweet-text");
+    $textarea.on("keyup", app.writeTweet);
 });
