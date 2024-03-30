@@ -18,6 +18,17 @@ article:hover {
     width: 100%;
 }
 
+.tweet-header-left {
+    display: flex;
+    align-items: center;
+}
+
+.tweet-header img {
+    width: 32px;
+    height: 32px;
+    padding-right: 10px;
+}
+
 .tweet-container {
     display: flex;
     align-items: center;
