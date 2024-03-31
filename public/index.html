@@ -34,6 +34,12 @@
 
         <!-- External JS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js"
+            integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
     </head>
 
     <body>
@@ -60,7 +66,7 @@
         <!-- Page-specific (main) content here -->
         <main class="container">
             <section class="new-tweet">
-                <form method="POST" action="/tweets">
+                <form class="new-tweets">
                     <label for="tweet-text">What are you humming about?</label>
                     <textarea
                         name="text"
