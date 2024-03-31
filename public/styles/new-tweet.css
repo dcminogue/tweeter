@@ -12,6 +12,10 @@ textarea {
     background-color: #f4f1ec;
 }
 
+#tweet-text::placeholder {
+    color: red;
+}
+
 .submit-tweet {
     display: flex;
     justify-content: space-between;

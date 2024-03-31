@@ -107,6 +107,18 @@ const loadTweets = function () {
 
 const onTweetSubmit = function (event) {
     event.preventDefault();
+    console.log(this);
+    if (!$(this).val()) {
+        $("#tweet-text").attr(
+            "placeholder",
+            "Please enter text before submitting."
+        );
+    }
+    console.log($("#counter"));
+    if ($("#counter").val() < 0) {
+        $("#tweet-text-label").text("Tweet is too long!!!");
+        return;
+    }
     const $form = $(this);
     const data = $form.serialize();
     console.log(data);
@@ -115,9 +127,12 @@ const onTweetSubmit = function (event) {
         .then(() => {
             console.log("Sent to server");
             // Clear the form fields
+
             $form.trigger("reset"); // This resets the form fields
             // Optionally, fetch and display the latest tweets here
             loadTweets(); // Assuming loadTweets is a function that fetches and displays tweets
+            $("#tweet-text").attr("placeholder", "");
+            $("#tweet-text-label").text("What are you humming about?"); // This resets the form fields
         })
         .fail((jqXHR, textStatus, errorThrown) => {
             console.error("Error submitting tweet: ", textStatus, errorThrown);
