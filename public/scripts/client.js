@@ -83,7 +83,7 @@ const renderTweets = function (users) {
     $(".tweets-container").empty();
     for (const user of users) {
         const element = createTweetElement(user);
-        $(".tweets-container").append(element);
+        $(".tweets-container").prepend(element);
     }
 };
 
