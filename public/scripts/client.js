@@ -39,9 +39,9 @@ $(document).ready(function () {
     $(".new-tweets").on("submit", onTweetSubmit);
 });
 
-// const loadTweets = function () {
-//     renderTweets(tweetData);
-// };
+const tweetButton = $("#tweet-button").on("click", function () {
+    $(".new-tweet").toggleClass("hide");
+});
 
 const convertDate = date => {
     const now = Date.now();

@@ -37,7 +37,15 @@ nav span {
     font-weight: 700;
 }
 
+#tweet-button {
+    background-color: #4056a1;
+}
+
 .redicon {
     margin: 0;
     color: red;
+}
+
+.redicon:hover {
+    color: whitesmoke;
 }

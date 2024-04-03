@@ -12,9 +12,9 @@ textarea {
     background-color: #f4f1ec;
 }
 
-#tweet-text::placeholder {
+/* #tweet-text::placeholder {
     color: red;
-}
+} */
 
 .submit-tweet {
     display: flex;
@@ -48,5 +48,5 @@ button:focus {
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
