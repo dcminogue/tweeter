@@ -109,14 +109,13 @@ const onTweetSubmit = function (event) {
     event.preventDefault();
     console.log(this);
     if (!$(this).val()) {
-        $("#tweet-text").attr(
-            "placeholder",
-            "Please enter text before submitting."
-        );
+        $("#error-message").text("Please enter text before submitting.");
+        $("#error-message").removeClass("hide");
     }
     console.log($("#counter"));
     if ($("#counter").val() < 0) {
-        $("#tweet-text-label").text("Tweet is too long!!!");
+        $("#error-message").text("Tweet is too long!!!");
+        $("#error-message").removeClass("hide");
         return;
     }
     const $form = $(this);
@@ -131,7 +130,7 @@ const onTweetSubmit = function (event) {
             $form.trigger("reset"); // This resets the form fields
             // Optionally, fetch and display the latest tweets here
             loadTweets(); // Assuming loadTweets is a function that fetches and displays tweets
-            $("#tweet-text").attr("placeholder", "");
+            $("#error-message").addClass("hide");
             $("#tweet-text-label").text("What are you humming about?"); // This resets the form fields
         })
         .fail((jqXHR, textStatus, errorThrown) => {

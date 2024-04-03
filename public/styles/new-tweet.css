@@ -37,6 +37,16 @@ button:focus {
     background-color: #203a73;
 }
 
-.counter-red {
+.counter-red,
+#error-message {
     color: red;
+}
+
+#error-message {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.hide {
+    display: none;
 }
