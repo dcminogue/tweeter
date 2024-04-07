@@ -35,19 +35,13 @@ const tweetData = [
 ];
 
 $(document).ready(function () {
-    loadTweets();
     $(".new-tweets").on("submit", onTweetSubmit);
+    loadTweets();
 });
 
 const tweetButton = $("#tweet-button").on("click", function () {
     $(".new-tweet").toggleClass("hide");
 });
-
-const convertDate = date => {
-    const now = Date.now();
-    const diff = Math.floor((now - date) / 1000 / 60 / 60 / 24);
-    return diff;
-};
 
 const createTweetElement = function (userTweet) {
     const timeISOString = new Date(userTweet.created_at).toISOString();
@@ -94,7 +88,6 @@ const loadTweets = function () {
         method: "GET",
         dataType: "json", // Expecting JSON response
         success: tweets => {
-            console.log("Fetch successful!");
             // Now that we have tweets, call renderTweets
             renderTweets(tweets);
         },
@@ -107,31 +100,31 @@ const loadTweets = function () {
 
 const onTweetSubmit = function (event) {
     event.preventDefault();
-    console.log(this);
     if (!$(this).val()) {
         $("#error-message").text("Please enter text before submitting.");
         $("#error-message").removeClass("hide");
     }
-    console.log($("#counter"));
     if ($("#counter").val() < 0) {
         $("#error-message").text("Tweet is too long!!!");
         $("#error-message").removeClass("hide");
         return;
     }
+
+    $("#tweet-text").on("keyup", () => {
+        $("#error-message").addClass("hide");
+    });
     const $form = $(this);
     const data = $form.serialize();
-    console.log(data);
 
     $.post("/tweets", data)
         .then(() => {
-            console.log("Sent to server");
-            // Clear the form fields
-
-            $form.trigger("reset"); // This resets the form fields
             // Optionally, fetch and display the latest tweets here
             loadTweets(); // Assuming loadTweets is a function that fetches and displays tweets
-            $("#error-message").addClass("hide");
             $("#tweet-text-label").text("What are you humming about?"); // This resets the form fields
+            $("#counter").text("140");
+            // Clear the form fields
+            $form.trigger("reset"); // This resets the form fields
+            $("#error-message").addClass("hide");
         })
         .fail((jqXHR, textStatus, errorThrown) => {
             console.error("Error submitting tweet: ", textStatus, errorThrown);

@@ -32,6 +32,8 @@ body {
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+    background-color: #cc8800;
+    background-image: url("https://www.transparenttextures.com/patterns/black-scales.png");
 }
 
 /*
@@ -41,4 +43,10 @@ main {
     width: 90%;
     margin: 0 auto;
     background-color: inherit;
+    background-color: #ffffff;
+}
+
+.wrapper-header-main {
+    background-color: #fff;
+    padding-bottom: 30px;
 }

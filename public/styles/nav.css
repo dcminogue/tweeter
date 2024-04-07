@@ -13,7 +13,8 @@ nav {
     font-style: normal;
     height: 120px;
     color: #ffffff;
-    background-color: #4056a1;
+    background-color: #cc8800;
+    background-image: url("https://www.transparenttextures.com/patterns/black-scales.png");
 }
 
 nav span {
@@ -38,14 +39,16 @@ nav span {
 }
 
 #tweet-button {
-    background-color: #4056a1;
+    background-color: transparent;
+    outline: none;
+    border: none;
 }
 
 .redicon {
     margin: 0;
-    color: red;
+    color: #fff;
 }
 
 .redicon:hover {
-    color: whitesmoke;
+    color: gold;
 }
