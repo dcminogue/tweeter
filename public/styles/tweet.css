@@ -38,8 +38,8 @@ article:hover {
 }
 .tweet-area {
     width: 95%;
-    display: flex;
-    justify-content: center;
+    text-align: left;
+    padding-left: 10px;
 }
 
 .tweet-footer {

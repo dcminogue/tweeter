@@ -53,13 +53,13 @@ const createTweetElement = function (userTweet) {
         <h2>${userTweet.user.name}</h2> </div>
         <h2>${userTweet.user.handle}</h2>
     </div>
-    <textarea
+    <p
         class="tweet-area"
         name="tweets"
         id="tweets"
-        required
+        
     >${userTweet.content.text}
-    </textarea>
+    </p>
     <div class="tweet-footer">
         <h2>${timeAgoString} </h2>
         <ul>
@@ -100,7 +100,7 @@ const loadTweets = function () {
 
 const onTweetSubmit = function (event) {
     event.preventDefault();
-    // console.log($(this));
+
     if ($("#tweet-text").val() === "") {
         $("#error-message").text("Please enter text before submitting.");
         $("#error-message").removeClass("hide");
