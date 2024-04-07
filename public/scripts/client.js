@@ -100,9 +100,11 @@ const loadTweets = function () {
 
 const onTweetSubmit = function (event) {
     event.preventDefault();
-    if (!$(this).val()) {
+    // console.log($(this));
+    if ($("#tweet-text").val() === "") {
         $("#error-message").text("Please enter text before submitting.");
         $("#error-message").removeClass("hide");
+        return;
     }
     if ($("#counter").val() < 0) {
         $("#error-message").text("Tweet is too long!!!");
