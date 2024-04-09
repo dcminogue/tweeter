@@ -9,12 +9,14 @@ textarea {
     resize: none;
     border: none;
     border-bottom: 3px solid black;
-    background-color: #f4f1ec;
+    height: 30px;
+    font-size: 24px;
+    line-height: 30px;
 }
 
-/* #tweet-text::placeholder {
-    color: red;
-} */
+#tweet-text-label {
+    font-weight: bold;
+}
 
 .submit-tweet {
     display: flex;

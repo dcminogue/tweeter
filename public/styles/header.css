@@ -15,3 +15,7 @@ header {
     margin: 20px 0;
     color: #ffffff;
 }
+
+.normal-weight {
+    font-weight: normal;
+}

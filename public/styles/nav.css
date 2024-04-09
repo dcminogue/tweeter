@@ -46,9 +46,9 @@ nav span {
 
 .redicon {
     margin: 0;
-    color: #fff;
+    color: red;
 }
 
 .redicon:hover {
-    color: gold;
+    color: whitesmoke;
 }

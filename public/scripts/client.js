@@ -46,22 +46,27 @@ const tweetButton = $("#tweet-button").on("click", function () {
 const createTweetElement = function (userTweet) {
     const timeISOString = new Date(userTweet.created_at).toISOString();
     const timeAgoString = $.timeago(timeISOString);
+    const escape = function (str) {
+        let div = document.createElement("div");
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+    };
     const element = `
     <article class="tweet-container">
     <div class="tweet-header">
         <div class="tweet-header-left"> <img src="${userTweet.user.avatars}"/>
         <h2>${userTweet.user.name}</h2> </div>
-        <h2>${userTweet.user.handle}</h2>
+        <h2 class="user-handle">${userTweet.user.handle}</h2>
     </div>
     <p
         class="tweet-area"
         name="tweets"
         id="tweets"
         
-    >${userTweet.content.text}
+    >${escape(userTweet.content.text)}
     </p>
     <div class="tweet-footer">
-        <h2>${timeAgoString} </h2>
+        <p>${timeAgoString} </p>
         <ul>
             <li><i class="fa-solid fa-flag"></i></li>
             <li><i class="fa-solid fa-retweet"></i></li>
